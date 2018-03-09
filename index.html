@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+ div, body {
+   margin: 0;
+   padding: 0;
+ }
+ .pic-list {
+ 	width: 600px;
+ 	height: auto;
+ 	overflow: hidden;
+   display: flex;
+   flex-wrap: wrap;
+ }
+ .pic-list-item {
+   flex: 0 0 33%;
+ }
+ .pic-list-item {
+    flex: 0 0 33%;
+    padding-top: 33%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    /*background-clip: padding-box; */
+    /*将背景图片的边距限制在padding外边届内（即不填充border）*/
+   /*box-sizing: border-box; */
+   /*开启border-box，将marin，padding，border算入height和width*/
+   /*border: 2px solid transparent;*/
+  }
+   .pic-list-item:first-child:nth-last-child(4) ~ .pic-list-item:nth-child(2) {
+   margin-right: 33%;
+ }
+
+   .pic-list-item:first-child:nth-last-child(1){
+   	padding-top: 100%;
+   flex: 100%;
+}
+	</style>
+</head>
+<body>
+ <section class="pic-list">
+   <div class="pic-list-item" style="background-image:url(imgs/1.jpg)"></div>
+   <div class="pic-list-item" style="background-image:url(imgs/2.jpg)"></div>
+   <div class="pic-list-item" style="background-image:url(imgs/3.jpg)"></div>
+   <div class="pic-list-item" style="background-image:url(imgs/4.jpg)"></div>
+   <div class="pic-list-item" style="background-image:url(imgs/5.jpg)"></div>
+   <div class="pic-list-item" style="background-image:url(imgs/6.jpg)"></div>
+   <div class="pic-list-item" style="background-image:url(imgs/7.jpg)"></div>
+   <div class="pic-list-item" style="background-image:url(imgs/8.jpg)"></div>
+   <div class="pic-list-item" style="background-image:url(imgs/9.jpg)"></div>
+   
+   <!--...(小于九个) -->
+ </section>
+</body>
+</html>
+
+
+<!-- 
+弹性布局：
+			1.定义盒子为弹性布局   display:flex;  
+			2.定义盒子主轴方向     flex-wrap:wrap;
+			3.定义子元素如何分配空间;
+			4.flex属性是flex-grow flex-shrink flex-basis属性的简写;
+			5.flex-basis  定义子元素项目宽度;
+			6.padding-top  定义子元素高度;
+			7.background-clip  规定背景绘制区域;
+			8.~ 选择器
+			            p ~ ul {
+							width:50px;
+			            }
+
+			            为所有相同父元素中位于P标签之后的所有ul元素设置宽度;
+
+ -->
